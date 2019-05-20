@@ -123,7 +123,7 @@ namespace C4TestTask
             peoples.Add(new People { Name = "Ирина", Position = "Рекрутер", DateOfBirth = "16.02.1989" });
             peoples.Add(new People { Name = "Светлана", Position = "Рекрутер", DateOfBirth = "16.02.1989" });
 
-            // сортируем колекцию по свойству "Имя", согласно ТЗ
+            // сортируем колекцию по свойству "Имя"
             ICollectionView _customerView = CollectionViewSource.GetDefaultView(peoples);
             _customerView.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));      
             Peoples = peoples;
