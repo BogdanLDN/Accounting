@@ -37,7 +37,7 @@
             </StackPanel>
         </Grid>
         <Button Width="150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,65" Content="Войти" Click="Button_Click" />
-        <TextBlock Text="Забули пароль?" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="30" Foreground="Gray" Cursor="Hand"/>
+        <TextBlock Text="Забыли пароль?" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="30" Foreground="Gray" Cursor="Hand"/>
         <Image Source="Assets/home.png"  Width="100" Height="100" VerticalAlignment="Top" Margin="30"/>
         <Button  HorizontalAlignment="Right" materialDesign:ShadowAssist.ShadowDepth="Depth0" VerticalAlignment="Top"    Click="Button_Click_1">
             <materialDesign:PackIcon Kind="Close"/>
