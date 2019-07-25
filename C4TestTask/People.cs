@@ -1,13 +1,9 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Windows;
 
 namespace C4TestTask
 {
-    /// <summary>
-    /// Модель приложения, наследует интерфейс INotifyPropertyChanged для возможности уведомить модель о изменениях.
-    /// </summary>
+
     public class People : INotifyPropertyChanged
     {
         private string name;
@@ -69,12 +65,7 @@ namespace C4TestTask
         {
             get
             {
-                if (dateOfBirth == null)
-                {
-                    dateOfBirth = "01.01.1900";
-                }
-
-                return AgeGenerator.ReturnAge(dateOfBirth).ToString();
+                return AgeConverter.ReturnAge(dateOfBirth).ToString();             
             }      
         }
         

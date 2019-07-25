@@ -1,4 +1,5 @@
-﻿using System;
+﻿using C4TestTask.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -24,7 +25,6 @@ namespace C4TestTask
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new VM(); 
         }
 
     }

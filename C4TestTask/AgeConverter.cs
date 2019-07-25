@@ -2,11 +2,12 @@
 
 namespace C4TestTask
 {
-    class AgeGenerator
+    class AgeConverter
     {
-        // вычесляенм возраст сотрудника
-      public static int ReturnAge(string birthdate)
+      public static int? ReturnAge(string birthdate)
         {
+            if (birthdate == null){return null;}
+
             DateTime today = DateTime.Today;
             DateTime birth = DateTime.Parse(birthdate);
 

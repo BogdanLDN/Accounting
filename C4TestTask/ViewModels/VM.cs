@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Data;
 
-namespace C4TestTask
+namespace C4TestTask.ViewModels
 {
     class VM : INotifyPropertyChanged
     {   
@@ -105,7 +105,6 @@ namespace C4TestTask
             }
         }
         
-
 
         public VM()
         {

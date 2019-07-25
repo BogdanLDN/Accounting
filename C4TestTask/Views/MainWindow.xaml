@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:C4TestTask.ViewModels"
         xmlns:local="clr-namespace:C4TestTask"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -10,6 +11,9 @@
         FontFamily="Dosis"       
         WindowStartupLocation="CenterScreen" WindowStyle="None"
         Title="TestTask" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:VM/>
+    </Window.DataContext>
     <Grid>
         <!--Делим  окно на 3 блока-->
         <Grid.ColumnDefinitions>
@@ -105,7 +109,7 @@
                             </Grid.RowDefinitions>
                             <TextBox Grid.Row="0" materialDesign:HintAssist.Hint="Имя" materialDesign:HintAssist.Foreground="Black"  materialDesign:HintAssist.IsFloating="True" Margin="0 12 0 0" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" DataContext="{Binding SelectedPeople}"/>
                             <TextBox Grid.Row="1" materialDesign:HintAssist.Hint="Позиция" materialDesign:HintAssist.Foreground="Black" materialDesign:HintAssist.IsFloating="True" Margin="0 12 0 0" Text="{Binding Position, UpdateSourceTrigger=PropertyChanged}" DataContext="{Binding SelectedPeople}"/>
-                            <TextBox Grid.Row="3" Name="dateBirth" materialDesign:HintAssist.Hint="Дата рождения" materialDesign:HintAssist.Foreground="Black" materialDesign:HintAssist.IsFloating="True"  Margin="0 12 0 0" Text="{Binding DateOfBirth, UpdateSourceTrigger=LostFocus}" DataContext="{Binding SelectedPeople}"/>
+                            <DatePicker Grid.Row="3" Name="dateBirth" materialDesign:HintAssist.Hint="Дата рождения" materialDesign:HintAssist.Foreground="Black" materialDesign:HintAssist.IsFloating="True"  Margin="0 12 0 0" SelectedDate="{Binding DateOfBirth, UpdateSourceTrigger=LostFocus}" DataContext="{Binding SelectedPeople}"/>
                             <StackPanel Orientation="Horizontal" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="3 3 3 3 ">
                                 <Button  Grid.Column="2" Grid.Row="5" Margin="5" Command="{Binding AddCommand}"  Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}">
                                     <materialDesign:PackIcon Kind="Plus" Height="22" Width="22" />
